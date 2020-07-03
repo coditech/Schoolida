@@ -60,6 +60,18 @@ class Staff {
   set role(role){
     this.#role = role;
   }
+  get address(){
+    return this.#address;
+  }
+  set address(address){
+    this.#address = address;
+  }
+  get base_salary(){
+    return this.#base_salary;
+  }
+  set base_salary(base_salary){
+    this.#base_salary = base_salary;
+  }
   get schoolida_email(){
     return this.#schoolida_email;
   }
@@ -77,6 +89,9 @@ class Staff {
   }
   set personal_email(personal_email){
     this.#personal_email = personal_email;
+  }
+  get bank_info(){
+    return this.#bank_info;
   }
 
   validate_role(role) {

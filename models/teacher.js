@@ -10,8 +10,7 @@ class Teacher extends Staff {
     bank_IBAN,
     bank_name,
     bank_branch,
-    subject,
-    employment_type
+    subject
   ) {
     const role = "teacher";
     super(
@@ -27,7 +26,7 @@ class Teacher extends Staff {
       bank_branch
     );
     this.subject = subject;
-    this.employment_type = this.validate_employment_type(employment_type);
+    this.employment_type = this.validate_employment_type('full-time');
     this.floors_covered = [];
     this.classes_taught = [];
     
@@ -49,8 +48,8 @@ class Teacher extends Staff {
   }
 
   assign_floor(num) {
-    if (isNaN(num) && num !== 1 && num !== 2 && num !== 3) {
-      return;
+    if (isNaN(num) || (num !== 1 && num !== 2 && num !== 3)) {
+           return;
     } else {
       this.floors_covered.push(num);
     }

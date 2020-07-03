@@ -33,6 +33,7 @@ class Part_Time_Teacher extends Teacher {
     );
     this.hourly_rate = hourly_rate;
     this.monthly_hours = monthly_hours;
+    this.employment_type=super.validate_employment_type('part-time');
   }
 
   ///add number validation function for both hourly rate and monthly hours
